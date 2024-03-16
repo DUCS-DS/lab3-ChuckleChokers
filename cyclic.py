@@ -1,14 +1,34 @@
 from llist import *
 
 def llprint(lst, num):
-    """print the first num terms of linked list lst"""
-    pass
+    node = lst.head
+    while node.next:
+        print(num)
+        if node.next = None:
+            break
 
-def find_cycle(lst):
-    """return the start index and length of the cycle"""
-    pass
+def find_cycle(f, x0) -> (int, int):
+    lst1 = f(x0)
+    lst2 = f(f(x0))
+    while lst1 != lst2:
+        lst1 = f(lst1)
+        lst2 = f(lst2)
+    lst = 0
+    lst1 = x0
+    while lst1 != lst2:
+        lst1 = f(lst1)
+        lst2 = f(lst2)
+        lst += 1
+    lst0 = 1
+    lst2 = f(lst1)
+    while lst1 != lst2:
+        lst2 = f(lst1)
+        lst0 += 1
+    return lst0, lst
 
 
 if __name__ == "__main__":
-
-    pass
+from llist import LList
+tup = find_cycle(lst)
+print(f"cycle start: [tup[0]]")
+print(f"     length: [tup[1]]")
